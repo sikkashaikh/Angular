@@ -1,0 +1,115 @@
+{
+  "countries": [
+    {
+      "label": "India",
+      "value": "1"
+    },
+    {
+      "label": "Dubai",
+      "value": "2"
+    },
+    {
+      "label": "US",
+      "value": "3"
+    },
+    {
+      "label": "Paris",
+      "value": "4"
+    },
+    {
+      "label": "xyz",
+      "value": "5"
+    }
+  ],
+  "cities": [
+    {
+      "label": "Mumbai",
+      "value": "1"
+    },
+    {
+      "label": "Pune",
+      "value": "2"
+    },
+    {
+      "label": "Chennai",
+      "value": "3"
+    },
+    {
+      "label": "Nagpur",
+      "value": "4"
+    },
+    {
+      "label": "Goa",
+      "value": "4"
+    }
+  ],
+  "demoTable": [
+    {
+      "vin": "Mumbai1",
+      "year": "1",
+      "brand": "bbbb1",
+      "color": "Red1"
+    },
+    {
+      "vin": "Mumbai2",
+      "year": "2",
+      "brand": "bbbb2",
+      "color": "Red2"
+    },
+    {
+      "vin": "Mumbai3",
+      "year": "3",
+      "brand": "bbbb3",
+      "color": "Red3"
+    },
+    {
+      "vin": "Mumbai4",
+      "year": "4",
+      "brand": "bbbb4",
+      "color": "Red4"
+    },
+    {
+      "vin": "Mumbai5",
+      "year": "5",
+      "brand": "bbbb5",
+      "color": "Red5"
+    },
+    {
+      "vin": "Mumbai6",
+      "year": "6",
+      "brand": "bbbb6",
+      "color": "Red6"
+    },
+    {
+      "vin": "Mumbai7",
+      "year": "7",
+      "brand": "bbbb7",
+      "color": "Red7"
+    },
+    {
+      "vin": "Mumbai8",
+      "year": "8",
+      "brand": "bbbb8",
+      "color": "Red8"
+    }
+  ],
+  "profile": {
+    "name": "nadeem1",
+    "email": "shaikh@sikka.com",
+    "mobile": 798789798,
+    "gender": "1",
+    "language": [
+      "1"
+    ],
+    "country": "2",
+    "city": [
+      "3",
+      "1"
+    ],
+    "emailORmobGroup": {
+      "enabled": true,
+      "email2": "d",
+      "mob2": "56"
+    }
+  }
+}

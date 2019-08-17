@@ -1,0 +1,122 @@
+<section class="content">
+  <div class="box box-info">
+    <!-- form start -->
+    <form class="form-horizontal" [formGroup]="settingForm">
+      <div class="box-body">
+        <div class="form-group" [ngClass]="{'has-error': formErrors.name}">
+          <label for="name" class="col-sm-2 control-label">Name</label>
+
+          <div class="col-sm-10">
+            <input type="name" class="form-control" id="name" placeholder="Name" formControlName="name">
+            <span class="help-block" *ngIf="formErrors.name">
+              {{formErrors.name}}
+            </span>
+          </div>
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': formErrors.email}">
+          <label for="email" class="col-sm-2 control-label">Email</label>
+
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="email" placeholder="Email" formControlName="email">
+            <span class="help-block" *ngIf="formErrors.email">
+              {{formErrors.email}}
+            </span>
+          </div>
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': formErrors.mobile}">
+          <label for="mobile" class="col-sm-2 control-label">Mobile</label>
+
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="mobile" placeholder="Mobile" formControlName="mobile">
+            <span class="help-block" *ngIf="formErrors.mobile">
+              {{formErrors.mobile}}
+            </span>
+          </div>
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': formErrors.gender}">
+          <label for="gender" class="col-sm-2 control-label">Gender</label>
+          <div class="col-sm-10">
+            <div class="radio">
+              <label>
+                <input type="radio" name="gender" id="gender" value="1" checked formControlName="gender">Male
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="gender" id="gender" value="2" formControlName="gender">Female
+              </label>
+            </div>
+            <span class="help-block" *ngIf="formErrors.gender">
+              {{formErrors.gender}}
+            </span>
+          </div>
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': formErrors.country}">
+          <label for="state" class="col-sm-2 control-label">Country</label>
+          <div class="col-sm-10">
+            <p-dropdown [options]="countries" formControlName="country" placeholder="Select a Country" [showClear]="true"></p-dropdown>
+            <span class="help-block" *ngIf="formErrors.country">
+              {{formErrors.country}}
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group" [ngClass]="{'has-error': formErrors.city}">
+          <label for="city" class="col-sm-2 control-label">City</label>
+          <div class="col-sm-10">
+            <p-multiSelect [options]="cities" formControlName="city" placeholder="Select a City"></p-multiSelect>
+            <span class="help-block" *ngIf="formErrors.city">
+              {{formErrors.city}}
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group" [ngClass]="{'has-error': formErrors.language}">
+          <label for="language" class="col-sm-2 control-label">Language</label>
+          <div class="col-sm-10">
+            <div class="checkbox">
+              <label>
+                <p-checkbox value="1" [formControl]="settingForm.controls['language']" label="English"></p-checkbox>
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <p-checkbox value="2" [formControl]="settingForm.controls['language']" label="Hindi"></p-checkbox>
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <p-checkbox value="3" [formControl]="settingForm.controls['language']" label="Marathi"></p-checkbox>
+              </label>
+            </div>
+            <span class="help-block" *ngIf="formErrors.language">
+              {{formErrors.language}}
+            </span>
+          </div>
+        </div>
+        <div formGroupName="emailORmobGroup" class="form-group" [ngClass]="{'has-error': formErrors.email2 || formErrors.mob2}">
+          <label for="emailORmob" class="col-sm-2 control-label">Email|Mobile</label>
+          <div class="col-sm-10">
+              <div class="col-sm-2">
+              <p-inputSwitch formControlName="enabled"></p-inputSwitch>{{settingForm.value.enabled}}
+              </div>
+            <div class="col-sm-4">
+              <input type="email2" class="form-control" id="email2" placeholder="Email Id" formControlName="email2">
+            </div>
+            <div class="col-sm-4">
+              <input type="mob2" class="form-control" id="mob2" placeholder="Mobile" formControlName="mob2">
+            </div>
+            <span class="help-block" *ngIf="formErrors.email2 || formErrors.mob2">
+              {{formErrors.email2}}
+              {{formErrors.mob2}}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="box-footer">
+        <button type="submit" class="btn btn-info pull-right" (click)="save();">Save</button>
+      </div>
+    </form>
+  </div>
+</section>

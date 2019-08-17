@@ -1,0 +1,13 @@
+json-server --watch db.json
+ng s --o
+
+
+How to add existing project to git hub
+
+1) Got to that project
+2) Remove existing git folder and setting if exist using this command (rd .git /s/q)
+3) Follow default command step by step
+git init
+git commit -m "first commit"
+git remote add origin <http url>
+git push -u origin master
